@@ -8,8 +8,8 @@ screenshots
 
 ## 😎 author
 
-[youseokhwan](https://github.com/youseokhwan) - Django
-[KimKyungHoon](https://github.com/hoonkk) - React
+- [youseokhwan](https://github.com/youseokhwan) - Django
+- [KimKyungHoon](https://github.com/hoonkk) - React
 
 ## 💻 development environment
 

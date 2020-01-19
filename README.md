@@ -6,7 +6,7 @@ React와 Django를 활용한 To Do List 프로젝트
 screenshots
 ~~~
 
-## 😎 author
+## 😎 member
 
 - [youseokhwan](https://github.com/youseokhwan) - Django
 - [KimKyungHoon](https://github.com/hoonkk) - React

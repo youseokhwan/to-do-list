@@ -22,7 +22,15 @@ screenshots
 ## 📚 usage
 
 ~~~
-usage
+// 프로젝트 다운로드
+$ git clone https://github.com/youseokhwan/to-do-list.git
+$ cd to-do-list
+
+// 서버 실행
+$ source venv/bin/activate
+(venv) $ python manage.py runserver
+
+// 홈페이지 접속
 ~~~
 
 ## 😥 issues

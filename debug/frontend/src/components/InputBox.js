@@ -1,8 +1,14 @@
 import React from 'react';
+import { InputGroup, Input, InputGroupAddon, Button } from 'reactstrap';
 
 const InputBox = (props) => {
     return (
-        <input placeholder="오늘 할일을 입력하세요!"/>
+        <InputGroup>
+            <Input placeholder="오늘의 일정을 입력하세요!"/>
+            <InputGroupAddon addonType="append">
+                <Button color="primary">+</Button>
+            </InputGroupAddon>
+        </InputGroup>
     );
 };
 

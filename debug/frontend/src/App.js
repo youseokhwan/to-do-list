@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import InputBox from './components/InputBox';
 import AppTeamplate from './components/AppTemplate';
 import TodoItemList from './components/TodoItemList';
@@ -22,11 +22,37 @@ const App = (props) => {
     }
   ]);
 
+  const nextIndex = useRef(4);
+
+  const onInsert = useCallback(
+    text => {
+      const item = {
+          id: nextIndex.current,
+          content: text,
+          done: false
+      };
+      setItems(items.concat(item));
+      nextIndex.current += 1;
+    },
+    [items],
+  );
+
+  const onToggle = useCallback(
+    id => {
+      // 토글 시에 done의 상태를 변경시킨다.
+      setItems (
+          items.filter(item => item.id !== id)
+          // item.id === id? {...item, done: !item.done} : item,
+      );
+    },
+    [items],
+  );
+
   return (
     <div>
       <AppTeamplate>
-        <InputBox/>
-        <TodoItemList items={items}/>
+        <InputBox onInsert={onInsert}/>
+        <TodoItemList items={items} onToggle={onToggle}/>
       </AppTeamplate>
     </div>
   );

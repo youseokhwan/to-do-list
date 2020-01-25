@@ -2,12 +2,12 @@ import React from 'react';
 import TodoItem from './TodoItem';
 import { ListGroup } from 'reactstrap';
 
-const TodoItemList = ({items}) => {
+const TodoItemList = ({items, onToggle}) => {
     return (
         <div>
             <ListGroup>
                 {items.map(item => (
-                    <TodoItem item={item} key={item.id}/>
+                    <TodoItem item={item} key={item.id} onToggle={onToggle}/>
                 ))}
             </ListGroup>
         </div>

@@ -33,7 +33,17 @@ const App = (props) => {
       };
       setItems(items.concat(item));
       nextIndex.current += 1;
-      console.log(items);
+    },
+    [items],
+  );
+
+  const onToggle = useCallback(
+    id => {
+      // 토글 시에 done의 상태를 변경시킨다.
+      setItems (
+          items.filter(item => item.id !== id)
+          // item.id === id? {...item, done: !item.done} : item,
+      );
     },
     [items],
   );
@@ -42,7 +52,7 @@ const App = (props) => {
     <div>
       <AppTeamplate>
         <InputBox onInsert={onInsert}/>
-        <TodoItemList items={items}/>
+        <TodoItemList items={items} onToggle={onToggle}/>
       </AppTeamplate>
     </div>
   );

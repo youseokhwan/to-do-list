@@ -1,11 +1,11 @@
 import React from 'react';
 import { ListGroupItem } from 'reactstrap';
 
-const TodoItem = ({item}) => {
-    const { id, content, done } = item;
+const TodoItem = ({item, onToggle}) => {
+    const { id, content, done} = item;
     return (
-        <ListGroupItem>{content}</ListGroupItem>
-    );
+        <ListGroupItem onClick={() => onToggle(id)}>{content}</ListGroupItem>
+    );    
 };
 
 export default TodoItem;

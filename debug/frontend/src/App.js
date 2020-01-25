@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import InputBox from './components/InputBox';
 import AppTeamplate from './components/AppTemplate';
 import TodoItemList from './components/TodoItemList';
@@ -22,10 +22,26 @@ const App = (props) => {
     }
   ]);
 
+  const nextIndex = useRef(4);
+
+  const onInsert = useCallback(
+    text => {
+      const item = {
+          id: nextIndex.current,
+          content: text,
+          done: false
+      };
+      setItems(items.concat(item));
+      nextIndex.current += 1;
+      console.log(items);
+    },
+    [items],
+  );
+
   return (
     <div>
       <AppTeamplate>
-        <InputBox/>
+        <InputBox onInsert={onInsert}/>
         <TodoItemList items={items}/>
       </AppTeamplate>
     </div>

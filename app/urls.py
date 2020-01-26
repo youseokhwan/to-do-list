@@ -4,4 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.print_list, name="print_list"),
+    path('addtask', views.add_task, name="add_task"),
+    path('deletetask', views.delete_task, name="delete_task"),
 ]

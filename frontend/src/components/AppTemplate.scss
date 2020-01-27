@@ -1,0 +1,18 @@
+.AppTemplate {
+    width: 400px;
+    background-color: beige;
+    .content {
+        width: 400px;
+        background-color: beige;
+    }
+    .title {
+        background-color: cyan ;
+        color: white;
+        height: 4rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

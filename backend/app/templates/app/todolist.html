@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+    <h1>To Do List</h1>
+    <p>React 빌드 후 생성된 정적 파일로 대체할 것</p>
+
+    <p>-----</p>
+
+    <p>[목록 불러오기 - READ]</p>
+    {% if tasks %}
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task.num }}: {{ task.content }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>등록된 내용이 없습니다.</p>
+    {% endif %}
+
+    <p>-----</p>
+
+    <p>[추가하기 - CREATE]</p>
+    <form action="/addtask" method="post">
+        {% csrf_token %}
+        할 일: <input type="text" name="content">
+        <input type="submit" value="등록">
+    </form>
+
+    <p>-----</p>
+
+    <p>[삭제하기 - DELETE]</p>
+    <form action="/deletetask" method="post">
+        {% csrf_token %}
+        삭제할 번호: <input type="text" name="num">
+        <input type="submit" value="삭제">
+    </form>
+</body>
+</html>

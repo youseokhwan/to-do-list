@@ -82,7 +82,7 @@ module.exports = function(proxy, allowedHost) {
     host,
     headers: {
       'Access-Control-Allow-Origin' : '*'
-    }
+    },
     overlay: false,
     historyApiFallback: {
       // Paths with dots should still use the history fallback.

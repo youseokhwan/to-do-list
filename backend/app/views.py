@@ -3,10 +3,19 @@ from app.models import Task
 
 
 # READ
+# def print_list(request):
+#     tasks = Task.objects.all()
+#
+#     return render(request, 'app/todolist.html', {
+#         'tasks': tasks
+#     })
+
+
+# READ
 def print_list(request):
     tasks = Task.objects.all()
 
-    return render(request, 'app/todolist.html', {
+    return render(request, 'app/index.html', {
         'tasks': tasks
     })
 

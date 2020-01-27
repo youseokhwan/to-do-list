@@ -7,7 +7,7 @@ const App = (props) => {
   const [items, setItems] = useState([
     {
       id: 0,
-      content: "롤 하기 ~",
+      content: "롤 하기 ~~~~~~sss~~",
       done: false
     },
     {

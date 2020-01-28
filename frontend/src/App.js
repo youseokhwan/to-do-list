@@ -2,8 +2,21 @@ import React, { useState, useCallback, useRef } from 'react';
 import InputBox from './components/InputBox';
 import AppTeamplate from './components/AppTemplate';
 import TodoItemList from './components/TodoItemList';
+import axios from 'axios';
+
+const getApi = async (req, res) => {
+  try {
+    const response = await axios.post('addtask')
+    console.dir(response.data);
+  } catch (e) {
+    console.dir(res);
+    console.log("sibadl");
+  }
+}
 
 const App = (props) => {
+
+  getApi()
   const [items, setItems] = useState([
     {
       id: 0,
@@ -28,8 +41,8 @@ const App = (props) => {
     text => {
       const item = {
           id: nextIndex.current,
-          content: text,
-          done: false
+          content: text
+          // done: false
       };
       setItems(items.concat(item));
       nextIndex.current += 1;

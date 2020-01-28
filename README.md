@@ -26,11 +26,20 @@ screenshots
 $ git clone https://github.com/youseokhwan/to-do-list.git
 $ cd to-do-list
 
-// 서버 실행
-$ source venv/bin/activate
-(venv) $ python manage.py runserver
+// React 설정
+$ cd frontend
+$ npm install
+$ yarn start
+// http://localhost:3000/ 접속 후 결과 확인
 
-// 홈페이지 접속
+// Django 설정
+$ cd ../backend
+$ source venv/bin/activate
+(venv) $ python3 -m pip install --upgrade pip
+(venv) $ pip install django~=2.0.0
+(venv) $ pip install django-webpack-loader
+(venv) $ python3 manage.py runserver
+// http://localhost:8000/ 접속 후 결과 확인
 ~~~
 
 ## 😥 issues

@@ -10,7 +10,6 @@ const InputBox = ({ onInsert }) => {
 
     const onClick = useCallback(
         e => {
-            console.log(value);
             onInsert(value);
             setValue('');
         },

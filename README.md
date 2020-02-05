@@ -20,7 +20,8 @@ screenshots
 - Google Chrome
 
 ## 📚 usage
-
+[link](http://ec2-13-209-17-208.ap-northeast-2.compute.amazonaws.com:8000/)<br>
+or
 ~~~
 // 프로젝트 다운로드
 $ git clone https://github.com/youseokhwan/to-do-list.git

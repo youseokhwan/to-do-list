@@ -3,19 +3,20 @@ from app.models import Task
 
 
 # READ
-# def print_list(request):
-#     tasks = Task.objects.all()
-#
-#     return render(request, 'app/todolist.html', {
-#         'tasks': tasks
-#     })
+# 리액트 적용 전 임시
+def todolist(request):
+    tasks = Task.objects.all()
+
+    return render(request, 'app/todolist.html', {
+        'tasks': tasks
+    })
 
 
 # READ
 def print_list(request):
     tasks = Task.objects.all()
 
-    return render(request, 'app/index.html', {
+    return render(request, 'app/todolist.html', {
         'tasks': tasks
     })
 
@@ -30,7 +31,7 @@ def add_task(request):
     else:
         Task(num=num, content=content).save()
 
-    return redirect('print_list')
+    return redirect('todolist')
 
 
 # DELETE
@@ -49,4 +50,4 @@ def delete_task(request):
                 task.num -= 1
                 task.save()
 
-    return redirect('print_list')
+    return redirect('todolist')

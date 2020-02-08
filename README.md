@@ -1,6 +1,6 @@
 # to-do-list
 
-React와 Django를 활용한 To Do List 프로젝트
+React와 Django를 활용한 To Do List 프로젝트 → [바로가기](http://ec2-13-209-17-208.ap-northeast-2.compute.amazonaws.com:8000/todolist)
 
 ~~~
 screenshots
@@ -20,8 +20,6 @@ screenshots
 - Google Chrome
 
 ## 📚 usage
-[link](http://ec2-13-209-17-208.ap-northeast-2.compute.amazonaws.com:8000/)<br>
-or
 ~~~
 // 프로젝트 다운로드
 $ git clone https://github.com/youseokhwan/to-do-list.git
